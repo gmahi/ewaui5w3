@@ -53,6 +53,24 @@
 			</FlexBox>
 		</uxap:headerContent>
 		<uxap:sections>
+			<uxap:ObjectPageSection title="{i18n>infoItemDetailsTitle}">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection>
+						<uxap:blocks>
+							<form:SimpleForm editable="false">
+								<Label text="{i18n>infoItemGrossPrice}"/>
+								<ObjectNumber number="{GrossAmount}" unit="{CurrencyCode}"/>
+								<Label text="{i18n>infoItemNetPrice}"/>
+								<ObjectNumber number="{NetAmount}" unit="{CurrencyCode}"/>
+								<Label text="{i18n>infoItemTax}"/>
+								<ObjectNumber number="{TaxAmount}" unit="{CurrencyCode}"/>
+								<Label text="{i18n>infoItemQuantity}"/>
+								<ObjectNumber number="{Quantity}" unit="{QuantityUnit}"/>
+							</form:SimpleForm>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
 			<uxap:ObjectPageSection title="{i18n>infoItemDeliveryTitle}">
 				<uxap:subSections>
 					<uxap:ObjectPageSubSection>
