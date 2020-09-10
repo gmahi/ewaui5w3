@@ -1,4 +1,5 @@
 <mvc:View xmlns="sap.m" xmlns:semantic="sap.f.semantic" xmlns:mvc="sap.ui.core.mvc" xmlns:tnt="sap.tnt"
+	xmlns:si="sap.suite.ui.commons.statusindicator"
 	controllerName="opensap.sorders.controller.Detail">
 	<semantic:SemanticPage id="detailPage" busy="{detailView&gt;/busy}" busyIndicatorDelay="{detailView&gt;/delay}" showFooter="true">
 		<semantic:titleHeading>
@@ -8,7 +9,7 @@
 			<!--<ObjectAttribute title="{i18n&gt;priceTitle}"/>
 			<ObjectNumber id="objectHeaderNumber" number="{ path: 'NetAmount', formatter: '.formatter.currencyValue' }" unit="{CurrencyCode}"/>-->
 			<ObjectAttribute title="{i18n>StatusDesc}"/>
-			<tnt:InfoLabel text="{LifecycleStatusDescription}" colorScheme="{ path : 'LifecycleStatus', formatter: '.formatter.deliverStatus' }"/>
+			<tnt:InfoLabel text="{LifecycleStatusDescription}" colorScheme="{ path : 'LifecycleStatus', formatter: '.formatter.deliveryStatus' }"/>
 		</semantic:headerContent>
 		<semantic:content>
 			<Table id="lineItemsList" width="auto" mode="SingleSelectMaster" items="{ToLineItems}" updateFinished=".onListUpdateFinished"
